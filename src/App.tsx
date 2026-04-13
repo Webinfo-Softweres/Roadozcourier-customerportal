@@ -1,0 +1,102 @@
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import Headers from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import Franchise from "./pages/Franchise";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import Skeleton from "./components/Loader/Skeleton";
+import { motion } from "framer-motion";
+
+const PageWrapper = ({ children }) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsLoading(true);
+
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, [location.pathname]);
+
+  return (
+    <motion.div
+      key={location.pathname}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.4 }}
+    >
+      {isLoading ? <Skeleton /> : children}
+    </motion.div>
+  );
+};
+
+export default function App() {
+  return (
+    <Router>
+      <div className="min-h-screen flex flex-col font-sans">
+
+        <Headers />
+
+        <main className="flex-grow">
+          <Routes>
+
+            <Route
+              path="/"
+              element={
+                <PageWrapper>
+                  <Home />
+                </PageWrapper>
+              }
+            />
+
+            <Route
+              path="/services"
+              element={
+                <PageWrapper>
+                  <Services />
+                </PageWrapper>
+              }
+            />
+
+            <Route
+              path="/franchise"
+              element={
+                <PageWrapper>
+                  <Franchise />
+                </PageWrapper>
+              }
+            />
+
+            <Route
+              path="/about"
+              element={
+                <PageWrapper>
+                  <AboutPage />
+                </PageWrapper>
+              }
+            />
+
+            <Route
+              path="/contact"
+              element={
+                <PageWrapper>
+                  <ContactPage />
+                </PageWrapper>
+              }
+            />
+
+          </Routes>
+        </main>
+
+        <Footer />
+
+      </div>
+    </Router>
+  );
+}
