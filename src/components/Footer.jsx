@@ -68,10 +68,10 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3 text-sm font-medium">
               <li><a href="#" className="text-[#dec06c]">Home</a></li>
-              <li><a href="#" className="hover:text-[#dec06c]">Services</a></li>
-              <li><a href="#" className="hover:text-[#dec06c]">Franchise</a></li>
-              <li><a href="#" className="hover:text-[#dec06c]">About</a></li>
-              <li><a href="#" className="hover:text-[#dec06c]">Contact</a></li>
+              <li><a href="/services" className="hover:text-[#dec06c]">Services</a></li>
+              <li><a href="/franchise" className="hover:text-[#dec06c]">Franchise</a></li>
+              <li><a href="/about" className="hover:text-[#dec06c]">About</a></li>
+              <li><a href="contact" className="hover:text-[#dec06c]">Contact</a></li>
             </ul>
           </div>
 

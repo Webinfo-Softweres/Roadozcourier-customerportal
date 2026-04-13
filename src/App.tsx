@@ -10,8 +10,19 @@ import ContactPage from "./pages/ContactPage";
 import Skeleton from "./components/Loader/Skeleton";
 import { motion } from "framer-motion";
 
+// Scroll to top on route change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 const PageWrapper = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -19,7 +30,7 @@ const PageWrapper = ({ children }) => {
 
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 500); // smoother than 1000ms
 
     return () => clearTimeout(timer);
   }, [location.pathname]);
@@ -29,7 +40,7 @@ const PageWrapper = ({ children }) => {
       key={location.pathname}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.4 }}
+      transition={{ duration: 0.3 }}
     >
       {isLoading ? <Skeleton /> : children}
     </motion.div>
@@ -39,63 +50,22 @@ const PageWrapper = ({ children }) => {
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col font-sans">
+      <ScrollToTop />
 
+      <div className="min-h-screen flex flex-col font-sans">
         <Headers />
 
         <main className="flex-grow">
           <Routes>
-
-            <Route
-              path="/"
-              element={
-                <PageWrapper>
-                  <Home />
-                </PageWrapper>
-              }
-            />
-
-            <Route
-              path="/services"
-              element={
-                <PageWrapper>
-                  <Services />
-                </PageWrapper>
-              }
-            />
-
-            <Route
-              path="/franchise"
-              element={
-                <PageWrapper>
-                  <Franchise />
-                </PageWrapper>
-              }
-            />
-
-            <Route
-              path="/about"
-              element={
-                <PageWrapper>
-                  <AboutPage />
-                </PageWrapper>
-              }
-            />
-
-            <Route
-              path="/contact"
-              element={
-                <PageWrapper>
-                  <ContactPage />
-                </PageWrapper>
-              }
-            />
-
+            <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
+            <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
+            <Route path="/franchise" element={<PageWrapper><Franchise /></PageWrapper>} />
+            <Route path="/about" element={<PageWrapper><AboutPage /></PageWrapper>} />
+            <Route path="/contact" element={<PageWrapper><ContactPage /></PageWrapper>} />
           </Routes>
         </main>
 
         <Footer />
-
       </div>
     </Router>
   );
