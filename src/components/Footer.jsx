@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Mail, Phone } from 'lucide-react';
+import { Instagram, Facebook, Phone, Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -23,14 +23,41 @@ export default function Footer() {
               <p>Kadavantra, Cochin, Kerala - 682020</p>
             </div>
 
+            {/* SOCIAL ICONS WITH LINKS */}
             <div className="flex gap-4">
-              {[Globe, Mail, Phone].map((Icon, i) => (
-                <Icon
-                  key={i}
+              
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/roadoz_couriers?igsh=Z3Azc2Y3YWpxOXpw"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram
                   size={20}
                   className="text-[#dec06c] cursor-pointer hover:opacity-70 transition"
                 />
-              ))}
+              </a>
+
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com/roadozlogistics?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Facebook
+                  size={20}
+                  className="text-[#dec06c] cursor-pointer hover:opacity-70 transition"
+                />
+              </a>
+
+              {/* Phone (optional click-to-call) */}
+              <a href="tel:+919496630687">
+                <Phone
+                  size={20}
+                  className="text-[#dec06c] cursor-pointer hover:opacity-70 transition"
+                />
+              </a>
+
             </div>
           </div>
 
@@ -68,11 +95,11 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-white/90 mb-6">
               <li className="flex items-center gap-2">
                 <Phone size={16} className="text-[#dec06c]" />
-                +91 94475 49256
+                +91 9496630687
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} className="text-[#dec06c]" />
-                inforoadoz@gmail.com
+                roadozcourierhr7@gmail.com
               </li>
             </ul>
 
