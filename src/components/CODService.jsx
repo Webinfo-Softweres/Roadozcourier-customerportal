@@ -17,9 +17,8 @@ export default function CODService() {
           </h2>
 
           <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed max-w-lg mx-auto md:mx-0">
-            Empower your business with our Cash On Delivery solutions. 
-            We handle the entire transaction lifecycle, ensuring secure 
-            payment collection and timely remittance.
+           Empower your business with our Cash On Delivery solutions. 
+            We manage the complete transaction process, ensuring secure payment collection and fast settlement within 48 working hours.
           </p>
 
         </div>
