@@ -21,9 +21,9 @@ export default function Hero() {
           </h2>
 
           <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-6 md:mb-8 max-w-md mx-auto md:mx-0 leading-relaxed">
-            Experience lightning-fast 24hr delivery and seamless doorstep
+            Experience lightning-fast <b>24-hour</b> delivery and seamless doorstep
             pickup services tailored for your convenience. From parcels
-            to heavy shipments, we move it with precision.
+            to heavy shipments, we handle it all with precision.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
