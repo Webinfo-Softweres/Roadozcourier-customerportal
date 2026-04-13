@@ -2,7 +2,9 @@ import React from "react";
 
 const Investment = () => {
   return (
-    <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-8">
+    <div>
+
+     {/* <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-8">
 
       <div className="max-w-6xl mx-auto text-center">
 
@@ -34,7 +36,9 @@ const Investment = () => {
         </div>
 
       </div>
-    </section>
+    </section> */}
+    </div>
+   
   );
 };
 

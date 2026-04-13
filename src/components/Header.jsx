@@ -116,7 +116,7 @@ export default function Header() {
               className="flex items-center justify-center gap-2 border border-[#dec06c] px-4 py-3 rounded-full text-sm font-semibold text-[#dec06c] hover:bg-[#dec06c] hover:text-[#3e4450] transition"
             >
               <Phone size={18} />
-              Call 94475 49256
+              Call 9496630687
             </a>
           </div>
 

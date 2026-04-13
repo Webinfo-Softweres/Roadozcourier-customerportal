@@ -23,7 +23,7 @@ const ContactFormSection = () => {
               <div className="bg-blue-50 p-3 rounded-xl h-fit"><MapPin className="text-blue-900" size={20}/></div>
               <div>
                 <h4 className="font-bold text-gray-900">Our Headquarters</h4>
-                <p className="text-gray-500 text-sm">Roadoz Logistics Center, 4th Floor<br/>Business District, KL, 682024</p>
+                <p className="text-gray-500 text-sm">Roadoz pvt Ltd , 1st Floor<br/>A..., 1st main koramangala, 1st Block Bengaluru, 560034</p>
               </div>
             </div>
 
@@ -32,7 +32,7 @@ const ContactFormSection = () => {
               <div className="bg-blue-50 p-3 rounded-xl h-fit"><Phone className="text-blue-900" size={20}/></div>
               <div>
                 <h4 className="font-bold text-gray-900">Phone Support</h4>
-                <p className="text-gray-500 text-sm">Main: 94475 49256<br/>Support: 0484 290 8800</p>
+                <p className="text-gray-500 text-sm">Main: 9496630687<br/>Support: 9496630687</p>
               </div>
             </div>
 
@@ -42,7 +42,7 @@ const ContactFormSection = () => {
               <div>
                 <h4 className="font-bold text-gray-900">WhatsApp Business</h4>
                 <p className="text-gray-500 text-sm italic">Instant support available 24/7</p>
-                <p className="text-gray-500 text-sm">+91 94475 49256</p>
+                <p className="text-gray-500 text-sm">+91 9496630687</p>
               </div>
             </div>
           </div>
