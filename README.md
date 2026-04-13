@@ -1,20 +1,36 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+🚚 Roadoz Courier Customer Portal
 
-# Run and deploy your AI Studio app
+A modern customer portal for a courier and logistics service, built to streamline shipment booking, tracking, and customer management.
 
-This contains everything you need to run your app locally.
+📌 Overview
 
-View your app in AI Studio: https://ai.studio/apps/154f4d29-5bfa-43ee-8c72-fff345a06747
+The Roadoz Courier Customer Portal is a web-based application designed to provide customers with an easy and efficient way to manage their deliveries. This project is developed as a portfolio/demo system showcasing full-stack development and logistics workflow handling.
 
-## Run Locally
+✨ Features
+📦 Shipment Booking – Create and schedule deliveries بسهولة
+🔍 Real-Time Tracking – Track parcels with live status updates
+📍 Address Management – Save and manage delivery addresses
+📊 Dashboard – View shipment history and analytics
+💳 Payment Integration – Secure online payment support
+🔐 Authentication – User login & registration system
+📞 Customer Support – Raise and manage support tickets
+🛠️ Tech Stack
 
-**Prerequisites:**  Node.js
+Frontend:
 
+HTML5 / CSS3 / JavaScript
+React.js (optional if you used it)
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Backend:
+
+Node.js / Express.js
+
+Database:
+
+MongoDB / MySQL
+
+Other Tools:
+
+REST APIs
+Git & GitHub
+RADME (for documentation/portfolio hosting)
