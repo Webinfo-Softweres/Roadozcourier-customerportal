@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instagram, Facebook, Phone, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -23,41 +24,27 @@ export default function Footer() {
               <p>Kadavantra, Cochin, Kerala - 682020</p>
             </div>
 
-            {/* SOCIAL ICONS WITH LINKS */}
+            {/* SOCIAL ICONS */}
             <div className="flex gap-4">
-              
-              {/* Instagram */}
               <a
                 href="https://www.instagram.com/roadoz_couriers?igsh=Z3Azc2Y3YWpxOXpw"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Instagram
-                  size={20}
-                  className="text-[#dec06c] cursor-pointer hover:opacity-70 transition"
-                />
+                <Instagram className="text-[#dec06c] hover:opacity-70" size={20} />
               </a>
 
-              {/* Facebook */}
               <a
                 href="https://www.facebook.com/roadozlogistics?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Facebook
-                  size={20}
-                  className="text-[#dec06c] cursor-pointer hover:opacity-70 transition"
-                />
+                <Facebook className="text-[#dec06c] hover:opacity-70" size={20} />
               </a>
 
-              {/* Phone (optional click-to-call) */}
               <a href="tel:+919496630687">
-                <Phone
-                  size={20}
-                  className="text-[#dec06c] cursor-pointer hover:opacity-70 transition"
-                />
+                <Phone className="text-[#dec06c] hover:opacity-70" size={20} />
               </a>
-
             </div>
           </div>
 
@@ -67,11 +54,11 @@ export default function Footer() {
               Quick Links
             </h3>
             <ul className="space-y-3 text-sm font-medium">
-              <li><a href="#" className="text-[#dec06c]">Home</a></li>
-              <li><a href="/services" className="hover:text-[#dec06c]">Services</a></li>
-              <li><a href="/franchise" className="hover:text-[#dec06c]">Franchise</a></li>
-              <li><a href="/about" className="hover:text-[#dec06c]">About</a></li>
-              <li><a href="contact" className="hover:text-[#dec06c]">Contact</a></li>
+              <li><Link to="/" className="text-[#dec06c]">Home</Link></li>
+              <li><Link to="/services" className="hover:text-[#dec06c]">Services</Link></li>
+              <li><Link to="/franchise" className="hover:text-[#dec06c]">Franchise</Link></li>
+              <li><Link to="/about" className="hover:text-[#dec06c]">About</Link></li>
+              <li><Link to="/contact" className="hover:text-[#dec06c]">Contact</Link></li>
             </ul>
           </div>
 
@@ -81,12 +68,12 @@ export default function Footer() {
               Services
             </h3>
             <ul className="space-y-3 text-sm font-medium">
-              <li><a href="#" className="hover:text-[#dec06c]">Delivery</a></li>
-              <li><a href="#" className="hover:text-[#dec06c]">Franchise</a></li>
+              <li><Link to="/services" className="hover:text-[#dec06c]">Delivery</Link></li>
+              <li><Link to="/franchise" className="hover:text-[#dec06c]">Franchise</Link></li>
             </ul>
           </div>
 
-          {/* CONTACT + NEWSLETTER */}
+          {/* CONTACT */}
           <div>
             <h3 className="text-lg font-semibold text-black mb-5">
               Connect Us
