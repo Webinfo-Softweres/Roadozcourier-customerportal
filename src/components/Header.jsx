@@ -28,6 +28,7 @@ export default function Header() {
               className="h-9 sm:h-10 md:h-12 lg:h-14"
             />
           </Link>
+
           <nav className="hidden lg:flex items-center gap-10">
             {navItems.map((item, i) => (
               <Link
@@ -58,6 +59,13 @@ export default function Header() {
               className="border border-[#dec06c] px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold text-[#dec06c] hover:bg-[#dec06c] hover:text-[#3e4450] transition"
             >
               Apply
+            </Link>
+
+            <Link
+              to="/"
+              className="border border-[#dec06c] px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold text-[#dec06c] hover:bg-[#dec06c] hover:text-[#3e4450] transition"
+            >
+              Login
             </Link>
 
             <button
@@ -116,11 +124,10 @@ export default function Header() {
               className="flex items-center justify-center gap-2 border border-[#dec06c] px-4 py-3 rounded-full text-sm font-semibold text-[#dec06c] hover:bg-[#dec06c] hover:text-[#3e4450] transition"
             >
               <Phone size={18} />
-              Call 9496630687
+              Call {phoneNumber}
             </a>
           </div>
 
-          {/* Mobile Apply */}
           <Link
             to="/franchise"
             onClick={() => setIsOpen(false)}
@@ -129,6 +136,13 @@ export default function Header() {
             Apply Franchise
           </Link>
 
+          <Link
+            to="/"
+            onClick={() => setIsOpen(false)}
+            className="mt-4 block text-center border border-[#dec06c] px-4 py-3 rounded-full text-sm font-semibold text-[#dec06c] hover:bg-[#dec06c] hover:text-[#3e4450] transition"
+          >
+            Login
+          </Link>
         </div>
       </div>
     </>
