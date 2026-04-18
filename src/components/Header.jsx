@@ -7,7 +7,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  const phoneNumber = "9447549256"; 
+  const phoneNumber = "9447549256";
 
   const navItems = [
     { label: 'Home', path: '/' },
@@ -34,11 +34,10 @@ export default function Header() {
               <Link
                 key={i}
                 to={item.path}
-                className={`text-sm font-medium transition ${
-                  location.pathname === item.path
+                className={`text-sm font-medium transition ${location.pathname === item.path
                     ? 'text-[#dec06c]'
                     : 'hover:text-[#dec06c]'
-                }`}
+                  }`}
               >
                 {item.label}
               </Link>
@@ -61,12 +60,14 @@ export default function Header() {
               Apply
             </Link>
 
-            <Link
-              to="/"
+            <a
+              href="https://admin.roadozcourier.com/login"
+              target="_blank"
+              rel="noopener noreferrer"
               className="border border-[#dec06c] px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold text-[#dec06c] hover:bg-[#dec06c] hover:text-[#3e4450] transition"
             >
               Login
-            </Link>
+            </a>
 
             <button
               onClick={() => setIsOpen(true)}
@@ -79,21 +80,18 @@ export default function Header() {
       </header>
 
       <div
-        className={`fixed inset-0 z-50 transition ${
-          isOpen ? 'visible' : 'invisible'
-        }`}
+        className={`fixed inset-0 z-50 transition ${isOpen ? 'visible' : 'invisible'
+          }`}
       >
         <div
-          className={`absolute inset-0 bg-black/50 transition-opacity ${
-            isOpen ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`absolute inset-0 bg-black/50 transition-opacity ${isOpen ? 'opacity-100' : 'opacity-0'
+            }`}
           onClick={() => setIsOpen(false)}
         />
 
         <div
-          className={`absolute top-0 right-0 h-full w-[75%] max-w-[300px] bg-[#3e4450] p-6 transform transition-transform ${
-            isOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
+          className={`absolute top-0 right-0 h-full w-[75%] max-w-[300px] bg-[#3e4450] p-6 transform transition-transform ${isOpen ? 'translate-x-0' : 'translate-x-full'
+            }`}
         >
           <div className="flex justify-end mb-8">
             <button onClick={() => setIsOpen(false)}>
@@ -106,11 +104,10 @@ export default function Header() {
               <Link
                 key={i}
                 to={item.path}
-                className={`text-base font-medium transition ${
-                  location.pathname === item.path
+                className={`text-base font-medium transition ${location.pathname === item.path
                     ? 'text-[#dec06c]'
                     : 'text-white hover:text-[#dec06c]'
-                }`}
+                  }`}
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
